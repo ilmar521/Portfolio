@@ -4,3 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
       element.parentNode.removeChild(element);
     }
   });
+
+//   $(document).ready(function() {
+//     $('#carouselProject2').carousel();
+
+//     $('#carouselProject2').on('slide.bs.carousel', function (event) {
+//     });
+// });
