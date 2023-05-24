@@ -5,9 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-//   $(document).ready(function() {
-//     $('#carouselProject2').carousel();
+document.querySelectorAll('#carouselProject2 .carousel-item img').forEach(function(element) {
+    element.addEventListener('click', function() {
+      var src = this.getAttribute('src');
+      document.getElementById('modalImage').setAttribute('src', src);
+    });
+  });
 
-//     $('#carouselProject2').on('slide.bs.carousel', function (event) {
-//     });
-// });
+document.getElementById('exampleModal').addEventListener('hidden.bs.modal', function () {
+    var modal = new bootstrap.Modal(document.getElementById('Project2'));
+    modal.show();
+  });
